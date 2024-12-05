@@ -27,7 +27,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, onImageSelect }) =>
 
   return (
     <div className={styles.imageGallery}>
-      <ImageGalleryHeader setViewMode={setViewMode} />
+      <ImageGalleryHeader setViewMode={setViewMode} viewMode={viewMode} />
       {images && (
         <ImageGrid
           images={images}
