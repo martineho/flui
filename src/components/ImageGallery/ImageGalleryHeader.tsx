@@ -4,13 +4,19 @@ import styles from "./ImageGallery.module.css";
 
 interface ImageGalleryHeaderProps {
   setViewMode: (mode: ViewModeType) => void;
+  viewMode: ViewModeType;
 }
 
-const ImageGalleryHeader: React.FC<ImageGalleryHeaderProps> = ({ setViewMode }) => {
+const ImageGalleryHeader: React.FC<ImageGalleryHeaderProps> = ({ setViewMode, viewMode }) => {
   return (
     <div className={styles.imageGalleryHeader}>
       <ul className={styles.buttonContainer}>
-        <button onClick={() => setViewMode("grid")} className={styles.button} aria-label="Grid">
+        <button
+          onClick={() => setViewMode("grid")}
+          className={styles.button}
+          aria-label="Grid"
+          style={{ opacity: viewMode === "grid" ? 1 : 0.7, transform: viewMode === "grid" ? "scale(1.03)" : "scale(1)" }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,7 +32,12 @@ const ImageGalleryHeader: React.FC<ImageGalleryHeaderProps> = ({ setViewMode }) 
             />
           </svg>
         </button>
-        <button onClick={() => setViewMode("list")} className={styles.button} aria-label="List">
+        <button
+          onClick={() => setViewMode("list")}
+          className={styles.button}
+          aria-label="List"
+          style={{ opacity: viewMode === "list" ? 1 : 0.7, transform: viewMode === "list" ? "scale(1.03)" : "scale(1)" }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -19,8 +19,8 @@ export const ImageItem: React.FC<ImageItemProps> = ({ image, onClick, innerRef, 
       }}
       onClick={onClick}
     >
-      <img src={image.src} alt={image.caption} className={styles.image} />
-      {viewMode === "grid" ? null : <p className={styles.imageCaption}>{image.caption}</p>}
+      <img src={image.src} alt={image.alt} className={styles.image} />
+      {viewMode === "grid" || !image.caption ? null : <p className={styles.imageCaption}>{image.caption}</p>}
     </div>
   );
 };
