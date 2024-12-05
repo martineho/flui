@@ -1,5 +1,5 @@
 {
-  "name": "fl-ui",
+  "name": "@flui/components",
   "version": "1.0.0",
   "description": "Elegant and fluid UI components",
   "main": "dist/index.js",
