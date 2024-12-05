@@ -1,11 +1,11 @@
-# FLUI
+# @martineho/ui
 
 Elegant and fluid UI components for React applications.
 
 ## Installation
 
 ```bash
-npm install flui
+npm install @martineho/ui
 ```
 
 ## Components
@@ -19,7 +19,7 @@ A responsive image gallery component that supports grid and list views.
 To use the Image Gallery component, first import it into your React component:
 
 ```javascript
-import { ImageGallery } from "flui";
+import { ImageGallery } from "@martineho/ui";
 ```
 
 Then, you can use the `ImageGallery` component in your JSX:
