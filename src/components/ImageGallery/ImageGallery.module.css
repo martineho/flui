@@ -1,0 +1,72 @@
+.imageGallery {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  overflow-y: scroll;
+  z-index: 100;
+  position: relative;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.imageGalleryHeader {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 0;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.buttonContainer {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  padding: 0.25rem;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: auto;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  font-size: 0.875rem;
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  position: relative;
+  transition: opacity 0.2s;
+}
+
+.imageItem {
+  position: relative;
+  transition: "opacity 0.3s";
+}
+
+.imageItem:hover {
+  opacity: 0.8;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+
+.imageCaption {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  color: black;
+  z-index: 50;
+}
